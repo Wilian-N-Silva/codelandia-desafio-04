@@ -1,0 +1,115 @@
+#login-page {
+  color: $gray;
+  font: $body;
+  display: flex;
+  height: 100vh;
+
+  & .col-side,
+  & .col-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  & .col-side {
+    display: none;
+    background-color: $white-200;
+
+    @include screen-lg {
+      display: flex;
+    }
+  }
+
+  & .col-login {
+    & .container {
+      position: relative;
+      display: flex;
+      height: 100%;
+      align-items: center;
+
+      & .form {
+        display: flex;
+        flex-direction: column;
+        gap: 11px;
+
+        &-heading {
+          margin-bottom: 28px;
+
+          & h1 {
+            font: $heading-1;
+          }
+
+          & span {
+            font: $heading-2;
+            margin-bottom: 7px;
+          }
+        }
+
+        &-options {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          font: $body-small;
+
+          &-remember {
+            width: 100%;
+
+            label {
+              display: block;
+              position: relative;
+              cursor: pointer;
+              padding-left: 26px;
+
+              & input {
+                position: absolute;
+                opacity: 0;
+                height: 0;
+                width: 0;
+
+                &:checked~span::after {
+                  display: block;
+                }
+              }
+
+              & span {
+                position: absolute;
+                height: 15px;
+                width: 15px;
+                border-radius: 50%;
+                background-color: $white-200;
+                border: 1px solid $white-100;
+                top: 0;
+                left: 0;
+
+
+                &::after {
+                  content: "";
+                  position: absolute;
+                  display: none;
+
+                  width: 13px;
+                  height: 13px;
+                  top: 0;
+                  left: 0;
+                  border-radius: 50%;
+                  background-color: $green-light;
+                }
+
+              }
+
+
+            }
+
+
+
+          }
+
+
+        }
+
+      }
+    }
+  }
+}

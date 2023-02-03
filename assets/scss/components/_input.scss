@@ -1,0 +1,16 @@
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  color: $gray;
+
+  & input {
+    font: $body-small;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    height: 50px;
+    border: 1px solid $white-100;
+    border-radius: 5px;
+  }
+}

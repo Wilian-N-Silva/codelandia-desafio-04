@@ -1,0 +1,52 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 5px;
+  height: 50px;
+  width: 100%;
+  cursor: pointer;
+
+  &.submit,
+  &.auth0-google {
+    color: $white;
+    font: $body-bold;
+    transition: .3s;
+  }
+
+  &.submit:hover,
+  &.auth0-google:hover {
+    transform: scale(1.05);
+  }
+
+  &.submit {
+    background-color: $green-light;
+  }
+
+  &.auth0-google {
+    display: flex;
+    flex-direction: row;
+    gap: 11px;
+    background-color: $gray;
+
+    & img {
+      width: 20px;
+    }
+  }
+
+  &.button-link {
+    text-decoration: none;
+    color: $gray;
+
+    & span {
+      color: $purple-light;
+    }
+
+  }
+
+  &.button-register {
+    position: absolute;
+    bottom: 52px;
+  }
+}
